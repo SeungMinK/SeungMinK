@@ -1,57 +1,43 @@
+```yaml
+name: 김승민
+role: Backend & Data Engineer
+company: BubbleTap (AI 챗봇 서비스)
+stack:
+  backend: [TypeScript, NestJS, Python, gRPC]
+  data: [Kafka, Elasticsearch, S3, Athena]
+  infra: [MySQL, Redis, Docker, AWS]
+```
 
-## Blog
-[Show](https://seung-min.tistory.com/)
+<p>
+  <a href="mailto:ksm8138@gmail.com"><img src="https://img.shields.io/badge/Gmail-ksm8138-EA4335?style=flat-square&logo=gmail&logoColor=white" /></a>
+  <a href="https://seung-min.tistory.com/"><img src="https://img.shields.io/badge/Blog-Tistory-FF5722?style=flat-square&logo=tistory&logoColor=white" /></a>
+</p>
 
+---
 
+### 요즘 만들고 있는 것
 
-## 경력 
- - (2020.11.01 ~ 2020.12.31) [한국생산성본부] 디지털 서포터즈 보조강사 
- - (2021.01.04 ~ 2021.03.01) [지오멕스소프트] 웹 솔루션 개발 2팀 인턴 
- - (2021.04.01 ~ 2021.07.01) [애니웨어] 인공지능 학습데이터 사업본부 인턴
- - (2021.09.01 ~ 2022.06.01) [소이넷] 웹 개발 
- - (2022.06.13 ~           ) [Adena Software] BubbleTap Backend 개발
+- **[CryptoBot](https://github.com/SeungMinK/cryptobot)** — Claude AI가 뉴스·공포탐욕지수·기술지표를 종합 분석해서 매매를 판단하는 자동매매 시스템. Python + FastAPI + React Admin.
 
- ## 활동  
- - (2020.01.06 ~ 02.21) [교육이수] 정보보안 전문가 과정 수료
- - (2020.06.20 ~ 21) [봉사] 아두이노 교육보조강사 활동
- - (2020.11.4) [대회] SW  아이디어 콘테스트 참여
- - (2020.11.3~4) [대회]SW HBC-5 딥러닝 해커톤 참여 
- - (2020.11.28~29) [Rthone] 빅데이터활용 해커톤 참여
+```
+Market Data ──→ 기술지표 계산 ──→ Claude AI 분석 ──→ 매매 신호 ──→ 주문 실행
+    │              │                                                    │
+    └── 뉴스/FGI ──┘              SQLite ←── 매매 기록 ──→ React Dashboard
+```
 
-## 학력
-- 2013.03 ~ 2016.03 상일미디어 고등학교 소프트웨어학과 졸업 <br>
-- 2016.03 ~ 2022.02 한림대학교 컴퓨터 공학과 졸업<br>
+### 요즘 고민하는 것
 
-## 수상
-### [SW Week] SW  아이디어 콘테스트 은상 
- - 빅데이터를 활용한 공개 SW 프로젝트 아이디어 컨테스트
- - 수상일자 : 2020.11.04
- - 기관 : 한림대학교 소프트웨어 융합대학
-### [SW Week]HBC-5 딥러닝 해커톤 동상 
-- 5개 건물 사진을 촬영/수집하고, 수집한 사진을 분류하는 딥러닝 모델 개발 대회
-- 수상일자 : 2020.11.04 
-- 기관 : 한림대학교 소프트웨어 융합대학
-### [한림대학교 SW 중심 사업단] 2021년 1학기 캡스톤 디자인 경연대회 은상 수상 
-- 한림대학교 택시 공유 플랫폼 "LymTaxi" 웹 앱 프로그램, 안드로이드 파트 개발
-- https://github.com/r0ach0/LymTaxi
-- 수상일자 : 2021. 06. 14 
-- 기관 : 한림대학교 소프트웨어 융합대학 
+- 백엔드 서비스에서 만들어지는 데이터를, 운영에 영향 없이 어떻게 잘 꺼내 쓸 수 있을까
+- CDC 파이프라인이 장애 나면 자동으로 복구되게 만드는 게 정말 가능한가 (해봤는데 꽤 됨)
+- 트레이딩 봇에서 백테스트 성과와 실전 성과의 괴리를 어떻게 줄일 수 있을까
 
-## 자격증
-- [Office Access® 2010]: 취득일자 2017/04/27 <br></li>
-- [Office PowerPoint® 2010] : 취득일자 2017/06/08</li>
-- [ITQ 아래한글 A등급] : 취득일자 2013/06/27 <br></li>
-- [ITQ 한글파워포인트 A등급] : 취득일자 2013/08/01<br></li>
-- [ITQ 한글엑셀 A등급] : 취득일자 2014/01/02<br></li>
-- [정보처리기능사] : 취득일자 2015/07/02 <br> </li>
+---
 
+### Recent Blog Posts
 
+<!-- blog-post-list:START -->
+<!-- blog-post-list:END -->
 
-
-
- 
- 
- 
-
-
- 
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=SeungMinK&show_icons=true&theme=default&hide_border=true&count_private=true" height="150" />
+</p>
