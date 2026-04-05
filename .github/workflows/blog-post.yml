@@ -16,3 +16,4 @@ jobs:
           max_post_count: 5
           template: "$newline- [$title]($url)"
           comment_tag_name: "BLOG-POST-LIST"
+          user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
