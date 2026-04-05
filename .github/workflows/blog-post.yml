@@ -12,8 +12,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: gautamkrishnar/blog-post-workflow@v1
         with:
-          feed_list: "https://seung-min.tistory.com/rss"
+          feed_list: "https://feedly.com/v3/feeds/feed%2Fhttps%3A%2F%2Fseung-min.tistory.com%2Frss"
           max_post_count: 5
           template: "$newline- [$title]($url)"
           comment_tag_name: "BLOG-POST-LIST"
-          user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
