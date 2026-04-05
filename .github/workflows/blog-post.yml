@@ -1,73 +1,67 @@
-name: Latest blog post workflow
+name: Update blog posts
 on:
   schedule:
     - cron: '0 */6 * * *'
   workflow_dispatch:
 
 jobs:
-  update-readme-with-blog:
-    name: Update this repo's README with latest blog posts
+  update-readme:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
 
       - name: Fetch RSS and update README
+        shell: bash
         run: |
-          # Fetch RSS with browser User-Agent
           RSS=$(curl -s -L \
             -H "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
             -H "Accept: application/rss+xml, application/xml, text/xml" \
             "https://seung-min.tistory.com/rss")
 
-          # Parse titles and links, take top 5
-          POSTS=$(echo "$RSS" | python3 -c "
-          import sys, xml.etree.ElementTree as ET
-          tree = ET.parse(sys.stdin)
-          items = tree.findall('.//item')[:5]
-          for item in items:
-              title = item.find('title').text
-              link = item.find('link').text
-              print(f'- [{title}]({link})')
-          ")
-
-          if [ -z "$POSTS" ]; then
-            echo "No posts fetched, skipping"
-            exit 0
-          fi
-
-          # Replace content between markers
-          python3 -c "
-          import re
-          with open('README.md', 'r') as f:
-              content = f.read()
-          pattern = r'(<!-- BLOG-POST-LIST:START -->).*?(<!-- BLOG-POST-LIST:END -->)'
-          replacement = r'\1
-${POSTS}
-\2'
-          content = re.sub(pattern, replacement, content, flags=re.DOTALL)
-          with open('README.md', 'w') as f:
-              f.write(content)
-          " 
-
-          # Escape for sed
-          ESCAPED_POSTS=$(echo "$POSTS" | sed 's/[&/\]/\&/g')
-          
           python3 << 'PYEOF'
+          import xml.etree.ElementTree as ET
           import re
-          posts = """$POSTS"""
+
           with open("README.md", "r") as f:
-              content = f.read()
+              readme = f.read()
+
+          try:
+              tree = ET.fromstring(open("/dev/stdin", "r").read() if False else "")
+          except:
+              pass
+
+          import subprocess
+          result = subprocess.run(
+              ["curl", "-s", "-L",
+               "-H", "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+               "-H", "Accept: application/rss+xml, application/xml, text/xml",
+               "https://seung-min.tistory.com/rss"],
+              capture_output=True, text=True
+          )
+
+          root = ET.fromstring(result.stdout)
+          items = root.findall(".//item")[:5]
+          lines = []
+          for item in items:
+              title = item.find("title").text
+              link = item.find("link").text
+              lines.append(f"- [{title}]({link})")
+          posts = "\n".join(lines)
+
           pattern = r"(<!-- BLOG-POST-LIST:START -->).*?(<!-- BLOG-POST-LIST:END -->)"
-          replacement = f"\1
-{posts}
-\2"
-          content = re.sub(pattern, replacement, content, flags=re.DOTALL)
+          replacement = f"\\1\n{posts}\n\\2"
+          readme = re.sub(pattern, replacement, readme, flags=re.DOTALL)
+
           with open("README.md", "w") as f:
-              f.write(content)
+              f.write(readme)
+
+          print(f"Updated {len(lines)} posts")
           PYEOF
 
       - name: Commit and push
         run: |
-          git config --global user.name "blog-post-bot"
-          git config --global user.email "blog-post-bot@example.com"
+          git config user.name "blog-post-bot"
+          git config user.email "blog-post-bot@example.com"
           git diff --quiet README.md || (git add README.md && git commit -m "docs: 블로그 포스트 자동 갱신" && git push)
