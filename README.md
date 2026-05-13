@@ -36,11 +36,11 @@ Market Data ──→ 기술지표 계산 ──→ Claude AI 분석 ──→ �
 ### Recent Blog Posts
 
 <!-- BLOG-POST-LIST:START -->
+- [Kafka Connect JDBC Source Connector, 스키마 변경 때마다 부서지는 이야기](https://seung-min.tistory.com/98)
+- [RDB에서 S3 + Athena로 전환할 때, 비용을 어떻게 계산했나](https://seung-min.tistory.com/99)
+- [JDBC Source Connector로 CDC 파이프라인을 구축한 이야기](https://seung-min.tistory.com/97)
 - [코인마다 다른 전략을 LLM이 배정하기 + 프롬프트 캐싱으로 비용 1/5](https://seung-min.tistory.com/71)
 - [코어 머니 로직 전수 리뷰 &mdash; 봇이 흘리는 돈 찾기](https://seung-min.tistory.com/70)
-- [봇이 알아서 돌게 만들기 &mdash; 스케줄러, 안전장치, 그리고 웹 사이트 제작](https://seung-min.tistory.com/69)
-- [실전 투입하자마자 터진 버그 6개 &mdash; 테스트에서 못 잡는 것들](https://seung-min.tistory.com/68)
-- [실전 운영에서 터진 것들 &mdash; 리스크 관리와 리팩토링](https://seung-min.tistory.com/65)
 <!-- BLOG-POST-LIST:END -->
 
 <a href="https://github.com/devxb/gitanimals">
