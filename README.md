@@ -36,11 +36,11 @@ Market Data ──→ 기술지표 계산 ──→ Claude AI 분석 ──→ �
 ### Recent Blog Posts
 
 <!-- BLOG-POST-LIST:START -->
+- [코인마다 다른 전략을 LLM이 배정하기 + 프롬프트 캐싱으로 비용 1/5](https://seung-min.tistory.com/71)
 - [코어 머니 로직 전수 리뷰 &mdash; 봇이 흘리는 돈 찾기](https://seung-min.tistory.com/70)
 - [봇이 알아서 돌게 만들기 &mdash; 스케줄러, 안전장치, 그리고 웹 사이트 제작](https://seung-min.tistory.com/69)
 - [실전 투입하자마자 터진 버그 6개 &mdash; 테스트에서 못 잡는 것들](https://seung-min.tistory.com/68)
 - [실전 운영에서 터진 것들 &mdash; 리스크 관리와 리팩토링](https://seung-min.tistory.com/65)
-- [FastAPI + React로 봇 관리 대시보드 만들기](https://seung-min.tistory.com/64)
 <!-- BLOG-POST-LIST:END -->
 
 <a href="https://github.com/devxb/gitanimals">
