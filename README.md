@@ -36,11 +36,11 @@ Market Data ──→ 기술지표 계산 ──→ Claude AI 분석 ──→ �
 ### Recent Blog Posts
 
 <!-- BLOG-POST-LIST:START -->
+- [UTC와 KST의 전쟁: Stored Procedure로 인덱스 살린 이야기](https://seung-min.tistory.com/100)
 - [Kafka Connect JDBC Source Connector, 스키마 변경 때마다 부서지는 이야기](https://seung-min.tistory.com/98)
 - [RDB에서 S3 + Athena로 전환할 때, 비용을 어떻게 계산했나](https://seung-min.tistory.com/99)
 - [JDBC Source Connector로 CDC 파이프라인을 구축한 이야기](https://seung-min.tistory.com/97)
 - [코인마다 다른 전략을 LLM이 배정하기 + 프롬프트 캐싱으로 비용 1/5](https://seung-min.tistory.com/71)
-- [코어 머니 로직 전수 리뷰 &mdash; 봇이 흘리는 돈 찾기](https://seung-min.tistory.com/70)
 <!-- BLOG-POST-LIST:END -->
 
 <a href="https://github.com/devxb/gitanimals">
